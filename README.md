@@ -47,6 +47,17 @@
 ### 2. Inference (Relation Extraction)
 `korre` 모듈을 통해서는 다음의 3가지 형태로 관계 추출을 수행할 수 있습니다.
 
-1. 사용자가 입력한 문장에 관계를 알고자 하는 개체 쌍의 앞뒤에 직접 entity marker token을 붙인 경우
+1. 사용자가 입력한 문장에 관계를 알고자 하는 개체 쌍의 앞뒤에 직접 **entity marker token**을 붙인 경우
 2. 문장과 관계를 알고자 하는 두 개체의 위치 인덱스를 직접 입력하는 경우
 3. 문장만 입력하여 내포되어 있는 모든 관계를 알고자 하는 경우
+
+#### 1. **entity marker token**이 존재하는 문장이 입력된 경우
+- 입력 예시
+```python
+>>> korre = KorRE()
+>>> korre.infer('[E1] 갤럭시 플립2 [/E1] 는 [E2] 삼성 [/E2] 에서 만든 스마트폰이다.', entity_markers_included=True)
+```
+- 출력 예시
+```python
+[('갤럭시 플립2', '삼성', '해당 개체의 제조사(manufacturer)')]
+```
