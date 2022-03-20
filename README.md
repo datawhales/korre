@@ -16,8 +16,7 @@
 >>> korre = KorRE()
 ```
 
-## Usage
-### 1. Named Entity Recognition
+## Named Entity Recognition
 문장 내에 내포되어 있는 관계를 추출하기 위해 개체명 인식이 필요합니다. 
 
 한국어 개체명 인식 모듈로는 `pororo`(https://github.com/kakaobrain/pororo) 모듈을 그대로 사용하였고 `korre`에서는 다음과 같이 사용 가능합니다.
@@ -44,14 +43,14 @@
  ('스마트폰', 'TERM', [17, 21])]
 ```
 
-### 2. Inference (Relation Extraction)
+## Inference (Relation Extraction)
 `korre` 모듈을 통해서는 다음의 3가지 형태로 관계 추출을 수행할 수 있습니다.
 
-1. 사용자가 입력한 문장에 관계를 알고자 하는 개체 쌍의 앞뒤에 직접 **entity marker token**을 붙인 경우
-2. 문장과 관계를 알고자 하는 두 개체의 위치 인덱스를 직접 입력하는 경우
-3. 문장만 입력하여 내포되어 있는 모든 관계를 알고자 하는 경우
+- 사용자가 입력한 문장에 관계를 알고자 하는 개체 쌍의 앞뒤에 직접 **entity marker token**을 붙인 경우
+- 문장과 관계를 알고자 하는 두 개체의 위치 인덱스를 직접 입력하는 경우
+- 문장만 입력하여 내포되어 있는 모든 관계를 알고자 하는 경우
 
-#### 1. **entity marker token**이 존재하는 문장이 입력된 경우
+### 1. **entity marker token**이 존재하는 문장이 입력된 경우
 - 입력 예시
 ```python
 >>> korre = KorRE()
