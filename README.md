@@ -1,7 +1,12 @@
 # KORean Relation Extraction (korre)
 한국어 문장 내에 존재하는 개체 사이의 관계를 추출하는 모듈입니다.
 
-## Requirements
+## Installation
+```console
+git clone https://github.com/datawhales/korre.git
+cd korre
+pip install -r requirements.txt
+```
 
 ## Quick Start
 먼저 `korre` 패키지를 다음과 같이 import 합니다.
