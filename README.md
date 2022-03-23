@@ -2,6 +2,8 @@
 한국어 문장 내에 존재하는 개체 사이의 관계를 추출하는 모듈입니다.
 
 ## Installation
+- `korre` 는 `python>=3.8` 환경을 필요로 합니다.
+- 다음과 같이 모듈을 설치하고 추가적으로 필요한 라이브러리를 설치합니다.
 ```console
 git clone https://github.com/datawhales/korre.git
 cd korre
