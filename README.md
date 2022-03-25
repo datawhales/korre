@@ -5,6 +5,7 @@
 
 BERT pretrained model로는 [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM)을 활용하였습니다. 
 
+
 ## Installation
 - `korre` 는 `python>=3.8` 환경을 필요로 합니다.
 - 다음과 같이 모듈을 설치하고 추가적으로 필요한 라이브러리를 설치합니다.
@@ -14,11 +15,13 @@ cd korre
 pip install -r requirements.txt
 ```
 
+
 ## Quick Start
 먼저 `korre` 패키지를 다음과 같이 import 합니다.
 ```python
 >>> from korre import KorRE
 ```
+
 
 패키지를 import 한 후에는, 다음과 같이 관계 추출을 수행할 수 있는 객체를 만들어줍니다. 
 
@@ -26,6 +29,7 @@ pip install -r requirements.txt
 ```python
 >>> korre = KorRE()
 ```
+
 
 ## Named Entity Recognition
 문장 내에 내포되어 있는 관계를 추출하기 위해 개체명 인식이 필요합니다. 
@@ -54,12 +58,14 @@ pip install -r requirements.txt
  ('스마트폰', 'TERM', [17, 21])]
 ```
 
+
 ## Inference (Relation Extraction)
 `korre` 모듈을 통해서는 다음의 3가지 형태로 관계 추출을 수행할 수 있습니다.
 
 - 사용자가 입력한 문장에 관계를 알고자 하는 개체 쌍의 앞뒤에 직접 **entity marker token**을 붙인 경우
 - 문장과 관계를 추출하고자 하는 두 개체의 위치 인덱스를 직접 입력하는 경우
 - 문장만 입력하여 내포되어 있는 모든 관계를 알고자 하는 경우
+
 
 ### 1. **entity marker token**이 존재하는 문장이 입력된 경우
 - 입력 예시
@@ -75,6 +81,7 @@ pip install -r requirements.txt
 
 `korre` 모듈에서는 **entity marker token**으로 개체의 앞에 붙이는 [E1], [E2]와 개체의 뒤에 붙이는 [/E1], [/E2]를 사용합니다.
 
+
 ### 2. 문장과 관계를 추출하고자 하는 두 개체의 위치 인덱스가 입력된 경우
 - 입력 예시
 ```python
@@ -86,6 +93,7 @@ pip install -r requirements.txt
 [('갤럭시 플립2', '삼성', '해당 개체의 제조사(manufacturer)')]
 ```
 `korre` 모듈의 메소드 함수 `ner`을 이용하여 문장에 존재하는 개체의 위치 인덱스를 구해 함께 입력한 경우에도 관계 추출을 수행할 수 있습니다.
+
 
 ### 3. 문장만 입력하여 내포되어 있는 모든 관계를 알고자 하는 경우
 - 입력 예시
