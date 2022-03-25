@@ -1,7 +1,7 @@
 # KORean Relation Extraction (korre)
-한국어 문장 내에 존재하는 개체 사이의 관계를 추출하는 모듈입니다.
-한국어 기반의 관계 추출 모델을 학습하기 위해 한국어를 기반으로 사전학습된 BERT 모델을 이용하였습니다.
-BERT pretrained model로는 [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM)을 활용하였습니다.
+한국어 문장 내에 존재하는 개체 사이의 관계를 추출하는 모듈입니다. 
+한국어 기반의 관계 추출 모델을 학습하기 위해 한국어를 기반으로 사전학습된 BERT 모델을 이용하였습니다. 
+BERT pretrained model로는 [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM)을 활용하였습니다. 
 
 ## Installation
 - `korre` 는 `python>=3.8` 환경을 필요로 합니다.
