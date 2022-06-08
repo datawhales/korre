@@ -8,7 +8,7 @@ import argparse
 import json
 import requests
 import wget
-import math
+
 
 import warnings
 warnings.filterwarnings('ignore')
